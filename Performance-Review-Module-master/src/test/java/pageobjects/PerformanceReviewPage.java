@@ -245,10 +245,41 @@ public class PerformanceReviewPage extends WebBasePage {
 	/* Click on Question */
 	public void clickOnQuestiopn() {
 		click(By.xpath("//a[@data-original-title='Question']"), "User Question", 20);
+		
 	}
 	/* Click on Short Term Goals Rating */
 	public void clickOnShortTermGoalRating() {
-		click(By.xpath("//div[contains(text(),'your short Term goals')]/ancestor::div[@class='feedback-box']/descendant::i[@value='4']"), "Short Term Goal Rating", 20);
+		try {
+			staticWait(3000);
+			 WebElement texctfieldDisabled = driver.findElement(By.xpath("//tg-textarea/textarea[@class='form-control form-control ans' and @disabled]"));
+			if (texctfieldDisabled.isDisplayed()) {
+				staticWait(3000);
+				logger.info("All Questions are already filled");
+				
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			click(By.xpath("//div[contains(text(),'your short Term goals')]/ancestor::div[@class='feedback-box']/descendant::i[@value='4']"), "Short Term Goal Rating", 20);
+			enterShortTermGoal();
+			clickOnLongTermGoalRating();
+			enterLongTermGoal();
+			clickOnCurrentApprasialCycleRating();
+			enterurrentAppraisalCycle();
+			clickOnWeaknessRating();
+			enterweaknesses();
+			clickOnSaveQuestion();
+			
+			clickOnSubmitReview();
+			enterDescription();
+			clickOnSaveSubmitReview();
+			clickOnOK();
+		}
+		/*
+		 * click(By.
+		 * xpath("//div[contains(text(),'your short Term goals')]/ancestor::div[@class='feedback-box']/descendant::i[@value='4']"
+		 * ), "Short Term Goal Rating", 20);
+		 */
 	}
 	//Enter Short Term Goal
 	public void enterShortTermGoal() {

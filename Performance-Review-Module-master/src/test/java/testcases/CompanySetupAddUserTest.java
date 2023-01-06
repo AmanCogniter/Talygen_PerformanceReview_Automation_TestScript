@@ -44,13 +44,16 @@ public class CompanySetupAddUserTest extends WebTestBase {
 		  companySetupUserAction.addFeedbackSetting();
 		  companySetupUserAction.addGoalSettings();
 		  companySetupUserAction.addNoteSettings();
-		 // companySetupUserAction.clickPerformanceReviewTab();
-		  //companySetupUserAction.addReview();
+			
+			  companySetupUserAction.clickPerformanceReviewTab();
+			  companySetupUserAction.addReview();
+			 
 		  companySetupUserAction.addSkillforCreatedUser();
 		  companySetupUserAction.addSkillSettings();
-		  companySetupUserAction.clickPerformanceReviewTab();
-		  companySetupUserAction.addReview();
-		 
+			/*
+			 * companySetupUserAction.clickPerformanceReviewTab();
+			 * companySetupUserAction.addReview();
+			 */
 		//new LoginAction(driver).logoutLoginNewUser();
 //		companySetupUserAction.clickPerformanceReviewTab();
 //		companySetupUserAction.addReview();

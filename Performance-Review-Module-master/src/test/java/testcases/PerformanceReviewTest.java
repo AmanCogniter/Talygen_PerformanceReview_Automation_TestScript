@@ -27,8 +27,8 @@ public class PerformanceReviewTest extends WebTestBase {
 		performanceReviewAction.validateGoalPage();
 		performanceReviewAction.validateSkillPage();
 		performanceReviewAction.validatefeedbackPage();
-		performanceReviewAction.clickonQuestion();
-		performanceReviewAction.clickonSubmitReview();
+		performanceReviewAction.clickonQuestionandSubmitReview();
+		/* performanceReviewAction.clickonSubmitReview(); */
 		
 	}
 }

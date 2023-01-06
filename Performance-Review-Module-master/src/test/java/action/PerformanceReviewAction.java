@@ -97,20 +97,22 @@ public class PerformanceReviewAction extends WebBasePage {
 		performanceReviewPage.clickOnfeedbackClosebutton();
 		
 	}
-		public void clickonQuestion() {
+		public void clickonQuestionandSubmitReview() {
 		performanceReviewPage.clickOnQuestiopn();
 		performanceReviewPage.clickOnShortTermGoalRating();
-		performanceReviewPage.enterShortTermGoal();
-		performanceReviewPage.clickOnLongTermGoalRating();
-		performanceReviewPage.enterLongTermGoal();
-		performanceReviewPage.clickOnCurrentApprasialCycleRating();
-		performanceReviewPage.enterurrentAppraisalCycle();
-		performanceReviewPage.clickOnWeaknessRating();
-		performanceReviewPage.enterweaknesses();
-		performanceReviewPage.clickOnSaveQuestion();
+		/*
+		 * performanceReviewPage.enterShortTermGoal();
+		 * performanceReviewPage.clickOnLongTermGoalRating();
+		 * performanceReviewPage.enterLongTermGoal();
+		 * performanceReviewPage.clickOnCurrentApprasialCycleRating();
+		 * performanceReviewPage.enterurrentAppraisalCycle();
+		 * performanceReviewPage.clickOnWeaknessRating();
+		 * performanceReviewPage.enterweaknesses();
+		 * performanceReviewPage.clickOnSaveQuestion();
+		 */
 
 	}
-	public void clickonSubmitReview() {
+	    public void clickonSubmitReview() {
 		performanceReviewPage.clickOnSubmitReview();
 		performanceReviewPage.enterDescription();
 		performanceReviewPage.clickOnSaveSubmitReview();

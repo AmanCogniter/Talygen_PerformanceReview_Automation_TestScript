@@ -112,14 +112,14 @@ public class CompanySetupUserPage extends WebBasePage {
 	// click on Performance Review Tab
 	public void clickPerformanceReviewTab() {
 		staticWait(6000);
-		findElementVisibility(By.xpath("//a[@id='PrReview']"), 25);
+		//findElementVisibility(By.xpath("//a[@id='PrReview']"), 25);
 		click(By.xpath("//a[@id='PrReview']"), "PerformanceReviewTab", 20);
 	}
 
 	// click on Add Review
 	public void clickAddReview() {
 		staticWait(3000);
-		click(By.cssSelector("#addnewreview"), "Add Review", 20);
+		click(By.xpath("//span[@id='reviewActions']/a[@id='addnewreview']"), "Add Review", 20);
 	}
 
 	// enter Title
@@ -182,7 +182,9 @@ public class CompanySetupUserPage extends WebBasePage {
 	// Add save buttona
 	public void saveButton() {
 		click(By.xpath("//a[@class='btn btn-success formbtn']"), "Save button", 20);
-	}
+		staticWait(3000);
+		driver.navigate().back();
+		}
 
 	// Add save buttona
 	public void getPopUpText() throws ParseException {
